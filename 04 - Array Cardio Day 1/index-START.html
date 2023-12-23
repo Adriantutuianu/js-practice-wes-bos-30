@@ -79,7 +79,7 @@
           return true; //keep it!
         }
       });
-      // THIS CODE CAN BE WRITTEN LIKE THAT AS WELL!!
+      //---- THIS CODE CAN BE WRITTEN LIKE THAT AS WELL!!----
       // const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
       console.table(fifteen);
       // Array.prototype.map()
@@ -90,6 +90,17 @@
       console.log(firstLast);
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
+      const sortInventors = inventors.sort(function (firstName, secondName) {
+        if (firstName.year > secondName.year) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      //---- THIS CODE CAN BE WRITTEN LIKE THAT AS WELL!!----
+
+      // const sortInventors = inventors.sort((a,b) => a.year > b.year ? 1 : -1)   --- ? 1 = return 1 , : -1 = else return -1;
+      console.table(sortInventors);
 
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live all together?
