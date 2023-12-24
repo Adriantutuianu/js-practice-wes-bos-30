@@ -44,21 +44,34 @@
       });
       console.log({ isAdult2 });
 
-      const findComments = comments.find((comment) => comment.id === 823423);
-
-      // SIMILAR CODE
       // Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
       // find the comment with the ID of 823423
+      const findComments = comments.find((comment) => comment.id === 823423);
+
+      // SIMILAR CODE
 
       // const findComments = comments.find(function (comment) {
       //   if (comment.id === 823423) return true;
       // });
 
       console.log(findComments);
+
       // Array.prototype.findIndex()
       // Find the comment with this ID
       // delete the comment with the ID of 823423
+
+      const index = comments.findIndex((comment) => comment.id === 823423);
+      console.log(index); // return 1
+      // first method to delete
+      // comments.splice(index, 1); // delete id823423
+
+      // another method to delete
+      const newComments = [
+        ...comments.slice(0, index),
+        ...comments.slice(index + 1),
+      ];
+      console.log(newComments);
     </script>
   </body>
 </html>
