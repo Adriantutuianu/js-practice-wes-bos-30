@@ -69,6 +69,7 @@
         items.push(item); // added the input text to the empty array items
 
         populateList(items, itemsList);
+        localStorage.setItem("items", JSON.stringify(items)); //json.stringify is transforming objects in array
         this.reset(); // reset the input text added
       }
       // function to show us the list inside local tapas
